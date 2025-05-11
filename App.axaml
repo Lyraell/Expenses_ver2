@@ -1,0 +1,23 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:Expenses.ViewModels"
+             xmlns:views="clr-namespace:Expenses.Views"
+             x:Class="Expenses.App"
+             RequestedThemeVariant="Default">
+	
+	<Application.Resources>
+		<ResourceDictionary>
+			<!-- Define the DataTemplates correctly with keys -->
+			<DataTemplate DataType="{x:Type viewmodels:AddExpenseViewModel}">
+				<views:AddExpenseView />
+			</DataTemplate>
+			<DataTemplate DataType="{x:Type viewmodels:ExpenseListViewModel}">
+				<views:ExpenseListView />
+			</DataTemplate>
+		</ResourceDictionary>
+	</Application.Resources>
+
+	<Application.Styles>
+		<FluentTheme />
+	</Application.Styles>
+</Application>

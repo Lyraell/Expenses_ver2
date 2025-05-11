@@ -1,0 +1,28 @@
+<UserControl
+    x:Class="Expenses.Views.ExpenseListView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:Expenses.ViewModels;assembly=Expenses"
+    x:DataType="vm:ExpenseListViewModel"
+	xmlns:model="clr-namespace:Expenses.Models;assembly=Expenses">
+
+
+    <StackPanel Margin="20">
+        <TextBlock
+            Margin="0,0,0,10"
+            FontSize="16"
+            Text="Expense List" />
+
+        <ListBox ItemsSource="{Binding Expenses}">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="model:Expenses">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Width="100" Text="{Binding Date}" />
+                        <TextBlock Width="100" Text="{Binding Type}" />
+                        <TextBlock Width="100" Text="{Binding Amount}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>
