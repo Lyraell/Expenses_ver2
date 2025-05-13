@@ -10,18 +10,24 @@
     Height="300"
     mc:Ignorable="d">
 
-    <StackPanel Margin="20">
-        <TextBlock
+	<!-- Only for previewer -->
+	<UserControl.DataContext>
+		<vm:AddExpenseViewModel />
+	</UserControl.DataContext>
+
+	
+	<StackPanel Margin="20">
+		<TextBlock
             Margin="0,0,0,10"
             FontSize="16"
             Text="Add Expense" />
-        <TextBox Margin="0,0,0,10" Watermark="Amount"  />
-        <ComboBox>
-            <ComboBoxItem Content="Food" />
-            <ComboBoxItem Content="Travel" />
-            <ComboBoxItem Content="Utilities" />
-        </ComboBox>
-        <DatePicker Margin="0,10" />
-        <Button Content="Save Expense" />
+		<TextBox Margin="0,0,0,10" Watermark="Amount" />
+		<ComboBox Margin="0,0,0,10">
+			<ComboBoxItem Content="Food" />
+			<ComboBoxItem Content="Travel" />
+			<ComboBoxItem Content="Utilities" />
+		</ComboBox>
+		<DatePicker Margin="0,0,0,10" />
+		<Button Content="Save Expense" />
     </StackPanel>
 </UserControl>

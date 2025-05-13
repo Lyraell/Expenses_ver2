@@ -5,7 +5,7 @@
     xmlns:fluent="clr-namespace:Avalonia.Themes.Fluent;assembly=Avalonia.Themes.Fluent"
     xmlns:viewmodels="clr-namespace:Expenses.ViewModels"
     xmlns:views="clr-namespace:Expenses.Views"
-    RequestedThemeVariant="Default">
+    >
 
 
     <!-- 	
@@ -20,46 +20,8 @@
 	-->
 
     <Application.Styles>
-        <fluent:FluentTheme />
-
-
-        <Style>
-            <Style.Resources>
-                <!--  Global Colors  -->
-                <Color x:Key="PrimaryColor">#ff34854d</Color>
-                <Color x:Key="SecondaryColor">#ffc2db65</Color>
-                <Color x:Key="HeaderTextColor">#ff9e7564</Color>
-                <Color x:Key="BackgroundColor">#ff4f6a00</Color>
-
-                <!--  Global Brushes  -->
-                <SolidColorBrush x:Key="HeaderTextBrush" Color="{StaticResource HeaderTextColor}" />
-                <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
-
-                <!--  Global Font  -->
-                <FontFamily x:Key="DefaultFont">
-                    >avares://Expenses/Assets/Combo-Regular.ttf@Combo
-                </FontFamily>
-            </Style.Resources>
-        </Style>
-
-        <!--  Header Style  -->
-        <Style Selector="TextBlock.header">
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="Foreground" Value="{StaticResource HeaderTextBrush}" />
-            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
-            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
-            <Setter Property="FontWeight" Value="Bold" />
-
-        </Style>
-
-        <!--  Button Style  -->
-        <Style Selector="Button">
-            <Setter Property="Background" Value="{StaticResource PrimaryColor}" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="Padding" Value="8" />
-        </Style>
+        <fluent:FluentTheme/>
+        <StyleInclude Source="avares://Expenses/Styles/GlobalStyles.axaml" />
 
     </Application.Styles>
 </Application>

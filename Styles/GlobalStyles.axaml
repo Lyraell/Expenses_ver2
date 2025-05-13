@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui" 
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<!--  Global Colors  -->
+	<Color x:Key="PrimaryColor">#ff34854d</Color>
+	<Color x:Key="SecondaryColor">#ffc2db65</Color>
+	<Color x:Key="HeaderTextColor">#ff9e7564</Color>
+	<Color x:Key="BackgroundColor">#ff4f6a00</Color>
+
+	<!--  Global Brushes  -->
+	<SolidColorBrush x:Key="HeaderTextBrush" Color="{StaticResource HeaderTextColor}" />
+	<SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+	<SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+	<SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+
+	<!--  Global Font  -->
+	<FontFamily x:Key="DefaultFont">avares://Expenses/Assets/Combo-Regular.ttf#Combo</FontFamily>
+
+	<!--  Styles  -->
+	<Style Selector="TextBlock.header">
+		<Setter Property="FontSize" Value="24" />
+		<Setter Property="Foreground" Value="{StaticResource HeaderTextBrush}" />
+		<Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+		<Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
+		<Setter Property="FontWeight" Value="Bold" />
+	</Style>
+
+	<Style Selector="Button">
+		<Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+		<Setter Property="Foreground" Value="White" />
+		<Setter Property="FontFamily" Value="{StaticResource DefaultFont}" />
+		<Setter Property="FontSize" Value="16" />
+		<Setter Property="Padding" Value="8" />
+	</Style>
+
+</ResourceDictionary>

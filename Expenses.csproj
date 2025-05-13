@@ -11,6 +11,11 @@
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
+	
+  <ItemGroup>
+	<AvaloniaResource Include="Styles\GlobalStyles.axaml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.1" />
