@@ -11,8 +11,10 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     x:DataType="vm:MainWindowViewModel"
+    Background="{StaticResource BackgroundBrush}"
     Icon="/Assets/avalonia-logo.ico"
     mc:Ignorable="d">
+
 
     <Design.DataContext>
         <!--
@@ -45,14 +47,14 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             HorizontalAlignment="Center"
-            FontSize="20"
+            Classes="header"
             Text="Expense Tracker" />
 
         <!--  Sidebar  -->
         <StackPanel
             Grid.Row="1"
             Grid.Column="0"
-            Background="LightGoldenrodYellow">
+            Background="{StaticResource SecondaryColor}">
             <Button Content="Home" />
             <Button
                 Margin="10"
