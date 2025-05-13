@@ -1,13 +1,18 @@
-<Application xmlns="https://github.com/avaloniaui"
+<Application
+    x:Class="Expenses.App"
+    xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewmodels="clr-namespace:Expenses.ViewModels"
              xmlns:views="clr-namespace:Expenses.Views"
-             x:Class="Expenses.App"
              RequestedThemeVariant="Default">
 	
 	<Application.Resources>
 		<ResourceDictionary>
-			<!-- Define the DataTemplates correctly with keys -->
+            <ResourceDictionary.MergedDictionaries>
+                <!--  Optional: put theme or other shared resources here  -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  ✅ These templates directly inside ResourceDictionary  -->
 			<DataTemplate DataType="{x:Type viewmodels:AddExpenseViewModel}">
 				<views:AddExpenseView />
 			</DataTemplate>
